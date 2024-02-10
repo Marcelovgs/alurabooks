@@ -5,11 +5,12 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>AluraBooks</title>
-     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="reset.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="reset.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -50,6 +51,67 @@
           <p class="banner__texto">Econtre em nossa estante o que percisa para seu desenvolvimento!</p>
           <input type="search" class="banner__pesquisa" placeholder="Qual sera sua proxima leitura?">
       </section>
+      <section class="carrossel">
+          <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+          <!-- Slider main container -->
+<div class="swiper">
+     <!-- If we need pagination -->
+     <div class="swiper-pagination"></div>
+
+     <!-- Additional required wrapper -->
+     <div class="swiper-wrapper">
+       <!-- Slides -->
+       <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da alura books"></div>
+       <div class="swiper-slide"><img src="img/Liderança.svg" alt="Livro sobre liderança em design da alura books"></div>
+       <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alura books"></div>
+       <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Livro sobre guia front end da alura books"></div>
+       <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre Portugol da alura books"></div>
+       <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="Livro sobre acessibilidade da alura books"></div>
+       
+       ...
+     </div>
+     
+     <!-- If we need navigation buttons -->
+     <div class="swiper-button-prev"></div>
+     <div class="swiper-button-next"></div>
+   
+     <div class="card">
+          <div class="card__descricao">
+
+               <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez voce também se interesse por...</h3>
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao__texto">construindo uma aplicaçao integrada com a plataforma do google.</p>
+               </div>
+               <!--2º Coluna-->
+               <img src="img/Angular.svg" class="descricao__imagem" alt="">
+          </div>
+
+          <!--2º Linha-->
+          <div class="card__botoes">
+               <!--1º Coluna-->
+               <ul class="botoes">
+                    <li class="botoes__item"><img src="img/Favoritos.svg" alt="favoritar livro"> </li>
+                    <li class="botoes__item"><img src="img/Compras.svg" alt="adicionar no carrinho de compras"> </li>
+               </ul>
+               <!--2º Coluna-->
+               <a href="#" class="botoes__ancora">Saiba mais</a>
+          </div>
+     </div>
+     
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+          const swiper = new Swiper('.swiper', {
+          spaceBetween: 10,
+          slidesPerView: 3,
+          pagination: {
+               el: '.swiper-pagination',
+               type: 'bullets',
+          },
+          });
+      </script>
 </body>
 
 </html>
